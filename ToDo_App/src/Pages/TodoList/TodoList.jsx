@@ -1,3 +1,5 @@
+import cancelImg from '../../assets/cancel.png';
+
 const TodoList = () => {
   return (
     <div>
@@ -27,7 +29,7 @@ const TodoList = () => {
           <div className="flex-shrink-0 h-4 w-4 rounded-full border-2 ml-auto cursor-pointer border-red-500 hover:bg-red-500"></div>
 
           <img
-            src="./images/cancel.png"
+            src={cancelImg}
             className="flex-shrink-0 w-4 h-4 ml-2 cursor-pointer"
             alt="Cancel"
           />
@@ -58,7 +60,7 @@ const TodoList = () => {
           <div className="flex-shrink-0 h-4 w-4 rounded-full border-2 ml-auto cursor-pointer border-red-500 hover:bg-red-500"></div>
 
           <img
-            src="./images/cancel.png"
+            src={cancelImg}
             className="flex-shrink-0 w-4 h-4 ml-2 cursor-pointer"
             alt="Cancel"
           />
