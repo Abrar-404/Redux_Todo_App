@@ -43,3 +43,8 @@ export const allCompleted = () => {
     type: ALLCOMPLETED,
   };
 };
+export const clearCompleted = () => {
+  return {
+    type: CLEARCOMPLETED,
+  };
+};
