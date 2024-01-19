@@ -1,11 +1,20 @@
-import { COLORCHANGED, STATUSCHANGED} from './ActionTypes'
+import { COLORCHANGED, STATUSCHANGED } from './ActionTypes';
 
 export const colorChanged = (color, changeType) => {
   return {
     type: COLORCHANGED,
     payload: {
       color,
-      changeType
-    }
-  }
-}
+      changeType,
+    },
+  };
+};
+
+export const statusChanged = status => {
+  return {
+    type: STATUSCHANGED,
+    payload: {
+      status,
+    },
+  };
+};
