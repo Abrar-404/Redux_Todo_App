@@ -47,9 +47,17 @@ const reducer = (state = InitialState, action) => {
           color: color,
         };
       });
-    
+
     case DELETED:
-    return state.filter(todo => todo.id !== todoId)
+      return state.filter(todo => todo.id !== action.payload);
+
+    case ALLCOMPLETED:
+      return state.map(todo => {
+        return {
+          ...todo,
+          completed: true,
+        };
+      });
 
     default:
       break;
