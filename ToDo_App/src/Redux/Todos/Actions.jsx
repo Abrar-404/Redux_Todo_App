@@ -37,3 +37,9 @@ export const deleted = todoId => {
     payload: todoId,
   };
 };
+
+export const allCompleted = () => {
+  return {
+    type: ALLCOMPLETED,
+  };
+};
