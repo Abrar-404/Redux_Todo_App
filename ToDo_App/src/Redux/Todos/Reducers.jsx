@@ -30,7 +30,21 @@ const reducer = (state = InitialState, action) => {
         }
         return {
           ...todo,
+          // eslint-disable-next-line no-undef
           completed: !completed,
+        };
+      });
+
+    case COLORSELECTED:
+      // eslint-disable-next-line no-case-declarations
+      const { todoId, color } = action.payload;
+      return state.map(todo => {
+        if (todo.id !== todoId) {
+          return todo;
+        }
+        return {
+          ...todo,
+          color: color,
         };
       });
 
