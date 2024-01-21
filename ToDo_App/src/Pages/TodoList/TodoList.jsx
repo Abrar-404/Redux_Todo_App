@@ -21,6 +21,13 @@ const TodoList = () => {
                 return true;
             }
           })
+          ?.filter(todo => {
+            const { colors } = filters;
+            if (colors.length > 0) {
+              return colors.includes(todo?.color);
+            }
+            return true;
+          })
           .map(todo => (
             <TodoApp todo={todo} key={todo.id}></TodoApp>
           ))}
