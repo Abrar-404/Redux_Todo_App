@@ -2,6 +2,7 @@ import { useDispatch } from 'react-redux';
 import cancelImg from '../../assets/cancel.png';
 import { toggled, colorSelected, deleted } from '../../Redux/Todos/Actions';
 
+// eslint-disable-next-line react/prop-types
 const TodoApp = ({ todo }) => {
   const dispatch = useDispatch();
   const { text, id, completed, color } = todo || {};
